@@ -44,5 +44,19 @@ class LinkedListTest < Minitest::Test
     assert_equal output, "pizza", output
   end
 
+  def test_a_popped_element_is_removed
+    list.push("pizza")
+    output = list.pop
+    assert_equal 0, list.count
+  end
+
+  def test_it_pops_an_element_from_the_end_of_list
+    list.push("pizza")
+    list.push("sandwich")
+    list.push("ice cream")
+    output = list.pop
+    assert_equal output, "ice cream", output
+    assert_equal 2, list.count
+  end
 
 end
