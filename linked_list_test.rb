@@ -20,5 +20,17 @@ class LinkedListTest < Minitest::Test
     assert_equal 0, list.count
   end
 
+  def test_it_pushes_an_element_into_an_empty_list
+    list.push("pizza")
+    assert_equal 1, list.count
+  end
+
+  def test_it_pushes_multiple_elements_into_a_list
+    skip
+    list.push("pizza")
+    list.push("sandwich")
+    assert_equal 2, list.count
+  end
+
 
 end
