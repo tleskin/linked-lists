@@ -21,7 +21,7 @@ class IterativeLinkedList
       @head = Node.new
     else
       target = head
-      while target.ink?
+      while target.link?
         target = target.link
       end
       target.link = Node.new
