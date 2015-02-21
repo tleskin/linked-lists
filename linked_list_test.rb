@@ -31,5 +31,12 @@ class LinkedListTest < Minitest::Test
     assert_equal 2, list.count
   end
 
+  def test_it_pushes_three_elements_into_a_list
+    list.push("pizza")
+    list.push("sandwich")
+    list.push("ice cream")
+    assert_equal 3, list.count
+  end
+
 
 end
