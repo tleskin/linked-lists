@@ -38,5 +38,11 @@ class LinkedListTest < Minitest::Test
     assert_equal 3, list.count
   end
 
+  def test_it_pops_an_element_from_the_list
+    list.push("pizza")
+    output = list.pop
+    assert_equal output, "pizza", output
+  end
+
 
 end

@@ -18,14 +18,22 @@ class IterativeLinkedList
 
   def push(data)
     if @head == nil
-      @head = Node.new
+      @head = Node.new(data)
     else
       target = head
       while target.link?
         target = target.link
       end
-      target.link = Node.new
+      target.link = Node.new(data)
     end
+  end
+
+  def pop
+    current = head
+    while current.link?
+      current = current.link
+    end
+    current.data
   end
 end
 
@@ -36,12 +44,15 @@ end
 class Node
 
   attr_accessor :link
-  # A single node for either list type
-  def initialize
+  attr_reader :data
 
+  # A single node for either list type
+  def initialize(input_data)
+    @data = input_data
   end
 
   def link?
     link
   end
+
 end
