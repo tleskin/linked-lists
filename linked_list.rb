@@ -1,5 +1,8 @@
 class IterativeLinkedList
   # A list using Iterative approaches
+  def count
+  0
+  end
 end
 
 #class RecursiveLinkedList
